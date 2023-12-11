@@ -24,7 +24,7 @@ export class SignupComponent {
   }
 
   onSubmit() {
-    this.http.post("https://starfish-app-wiodz.ondigitalocean.app/user/signup",this.signupForm.value).subscribe((data:any)=>{
+    this.http.post("http://localhost:8080/credentials/signUp",this.signupForm.value).subscribe((data:any)=>{
     console.log(data);
     if(data.mssg === "User signedup"){
       this.showLoginLink = true;
